@@ -27,6 +27,7 @@
   --contrast-color: #FCFDFF; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --bright-pink: #F731CC;
   --bright-blue: #5BE3CE;
+  --light-green:#E7F5F3;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -467,7 +468,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding: 40px 0;
+  padding: 20px 0;
   position: relative;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
 }
@@ -487,7 +488,6 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin: 0 5px;
@@ -500,7 +500,8 @@ h6 {
 }
 
 .footer .credits {
-  margin-top: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-top: 40px;
   font-size: 13px;
   text-align: center;
 }
@@ -994,7 +995,7 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
   display: block;
 }
 
-.about .about-content h2 {
+.about-content h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -1193,6 +1194,7 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 
 .resume .resume-wrapper .timeline .timeline-item .timeline-right ul {
   padding-left: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
 
 .resume .resume-wrapper .timeline .timeline-item .timeline-right ul li {
@@ -1402,9 +1404,9 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonials-slider {
-  width: 100%;
+  width: 60%;
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 .testimonials .swiper-wrapper {
@@ -1412,9 +1414,14 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 }
 
 .testimonials .testimonial-item {
+  display: inline-flex;
+  /* align-content: center; */
+  vector-effect: non-scaling-stroke;
   background-color: var(--surface-color);
   padding: 40px;
   border-radius: 20px;
+  text-align: left;
+  vector-effect: non-scaling-stroke;
 }
 
 @media (max-width: 575px) {
@@ -1560,6 +1567,7 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 .services .service-item h3 {
   font-size: 1.25rem;
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .services .service-item h3 a {
@@ -1811,12 +1819,16 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-.portfolio-details .portfolio-description h2 {
+ h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
@@ -1892,7 +1904,7 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 
 .service-details .service-details-slider .swiper-pagination {
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   left: 0;
   right: 0;
   z-index: 2;
@@ -1901,7 +1913,8 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 .service-details .service-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: var(--contrast-color);
+  background-color: #fff;
+  border: 1px solid #b9b4b4;
   opacity: 0.5;
   transition: 0.3s;
 }
@@ -1921,7 +1934,16 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 .service-details .content p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 100;
 }
+.service-description p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
 
 .service-details .content .features .feature-box {
   padding: 20px;
@@ -1932,9 +1954,6 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
   transition: 0.3s;
 }
 
-.service-details .content .features .feature-box:hover {
-  transform: translateY(-5px);
-}
 
 .service-details .content .features .feature-box i {
   font-size: 24px;
@@ -1983,19 +2002,19 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
   margin-bottom: 5px;
 }
 
-.service-details .service-info .info-item p {
+.service-details, .service-info, .info-item p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
 
-.service-details .related-services {
+.service-details, .portfolio-details, .related-services {
   background: var(--surface-color);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
-.service-details .related-services h4 {
+.service-details, .related-services h4 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 25px;
@@ -2003,48 +2022,66 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
   border-bottom: 2px solid color-mix(in srgb, var(--accent-color), transparent 85%);
 }
 
-.service-details .related-services .service-item {
+.service-details, .related-services, .service-item {
   margin-bottom: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.service-details .related-services .service-item:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
+.service-details, .related-services, .service-item:last-child {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: none;
 }
 
-.service-details .related-services .service-item i {
+.service-details, .related-services, .service-item i {
   font-size: 24px;
   color: var(--accent-color);
   margin-bottom: 10px;
 }
 
-.service-details .related-services .service-item h5 {
+.service-details, .related-services, .service-item h5 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.service-details .related-services .service-item h5 a {
+.service-details, .related-services, .service-item h5 a {
   color: var(--heading-color);
   transition: 0.3s;
 }
 
-.service-details .related-services .service-item h5 a:hover {
+.service-details, .related-services, .service-item h5 a:hover {
   color: var(--accent-color);
 }
 
-.service-details .related-services .service-item p {
+.service-details{
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
   font-size: 14px;
+  font-weight: 100;
+  padding-bottom: 80px;
+}
+
+.related-services{
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+  font-size: 14px;
+  font-weight: 100;
+  padding-bottom: 20px;
+}
+
+.service-item p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+  font-size: 14px;
+  font-weight: 100;
+ 
 }
 
 @media (max-width: 991px) {
 
-  .service-details .service-info,
-  .service-details .related-services {
+  .service-details, .service-info,
+  .service-details, .related-services {
     margin-top: 30px;
   }
 }
