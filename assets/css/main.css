@@ -65,7 +65,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   font-family: var(--default-font);
 }
 
@@ -556,6 +556,10 @@ h6 {
   text-align: center;
   padding: 20px 0;
 }
+.page-title-2 {
+  text-align: center;
+  padding-top: 40px;
+}
 
 .page-title .breadcrumbs {
   margin-bottom: 1.5rem;
@@ -610,6 +614,13 @@ h6 {
 
 }
 
+.page-title-2 .title-wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700; 
+  color: var(--heading-color);
+
+}
 .page-title .title-wrapper p {
   font-size: 1.1rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -810,6 +821,10 @@ section,
   padding: 2rem;
 }
 
+.hero-image-2 {
+  position: relative;
+  
+}
 .hero-image img {
   position: relative;
   z-index: 2;
@@ -837,15 +852,7 @@ section,
     right: 0px;
   animation: morphShape 15s linear infinite;
 }
- .hero-image .shape-2 {
-
-  width: 200px;
-  height: 200px;
-  background-color: color-mix(in srgb, var(--bright-pink), transparent 90%);
-  bottom: 0px;
-  left: -20px;
-  animation: morphShape 20s linear infinite reverse;
-}
+ .hero-image .shape-2 {width: 200px;height: 200px;background-color: color-mix(in srgb, var(--bright-pink), transparent 90%);bottom: 50px;left: -20px;animation: morphShape 20s linear infinite reverse;}
 
 .hero-image .shape-3 {
   
