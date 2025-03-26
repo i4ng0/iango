@@ -1411,7 +1411,7 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonials-slider {
-  width: 60%;
+  width: 100%;
   position: relative;
   padding-bottom: 20px;
 }
@@ -1425,7 +1425,7 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
   /* align-content: center; */
   vector-effect: non-scaling-stroke;
   background-color: var(--surface-color);
-  padding: 40px;
+  padding: 24px;
   border-radius: 20px;
   text-align: left;
   vector-effect: non-scaling-stroke;
@@ -1489,7 +1489,7 @@ color-mix(in srgb, var(--bright-blue), transparent 50%);
 }
 
 .testimonials .swiper-navigation {
-  position: absolute;
+  position: relative;
   bottom: 0;
   gap: 10px;
 }
